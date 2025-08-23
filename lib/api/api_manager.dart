@@ -54,9 +54,13 @@ class ApiManager {
         "q": quary,
       },
     );
-    var response = await http.get(url);
-    var bodyString = response.body; // string
-    var json = jsonDecode(bodyString); // json
-    return NewsResponse.fromJson(json); //object
+    try {
+      var response = await http.get(url);
+      var bodyString = response.body; // string
+      var json = jsonDecode(bodyString); // json
+      return NewsResponse.fromJson(json); //object}
+    } catch (e) {
+      throw e;
+    }
   }
 }

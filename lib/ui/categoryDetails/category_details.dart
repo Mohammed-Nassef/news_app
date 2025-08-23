@@ -16,7 +16,7 @@ class CategoryDetails extends StatefulWidget {
 }
 
 class _CategoryDetailsState extends State<CategoryDetails> {
-  // final List<Source>? listSource;
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +62,7 @@ class _CategoryDetailsState extends State<CategoryDetails> {
                   '${snapShot.data!.message}',
                   style: Theme.of(context).textTheme.titleMedium,
                 ),
-                // Text(snapShot.data!.message!),
+               
                 ElevatedButton(
                   onPressed: () {
                     ApiManager.getSources(widget.category!.id);
@@ -72,7 +72,7 @@ class _CategoryDetailsState extends State<CategoryDetails> {
                     foregroundColor: Theme.of(context).primaryColor,
                     backgroundColor: Theme.of(context).indicatorColor,
                   ),
-                  child: Text(
+                  child:const Text(
                     'Try agian',
                   ),
                 ),
@@ -84,11 +84,7 @@ class _CategoryDetailsState extends State<CategoryDetails> {
         return SourceTab(
           listSource: listSource,
         );
-        //  ListView.builder(
-        //   itemBuilder: (context, index) =>
-        //       Text(listSource[index].name ?? " "),
-        //   itemCount: listSource.length,
-        // );
+   
       },
     );
   }

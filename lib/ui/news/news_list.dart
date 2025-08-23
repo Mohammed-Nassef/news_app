@@ -8,7 +8,7 @@ import 'package:url_launcher/url_launcher.dart';
 class NewsList extends StatelessWidget {
   final List<Article> newslist;
 
-  NewsList({super.key, required this.newslist});
+  const NewsList({super.key, required this.newslist});
 
   @override
   Widget build(BuildContext context) {
@@ -62,8 +62,7 @@ class NewsList extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(8),
               child: CachedNetworkImage(
-                // height: screenHeight * 0.25,
-                // width: screenWidth,
+         
                 fit: BoxFit.fill,
                 imageUrl: article.urlToImage ?? '',
                 placeholder: (context, url) => const Center(
@@ -90,7 +89,7 @@ class NewsList extends StatelessWidget {
             ),
             FilledButton.icon(
               style: FilledButton.styleFrom(
-                  padding: EdgeInsets.symmetric(vertical: 16),
+                  padding:const EdgeInsets.symmetric(vertical: 16),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8),
                   ),

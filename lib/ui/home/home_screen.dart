@@ -32,10 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
           IconButton(
             onPressed: () {
               Navigator.of(context).pushNamed(SearchScreen.routeName);
-              // showSearch(
-              //   context: context,
-              //   delegate: Search(),
-              // );
+          
             },
             icon: SvgPicture.asset(
               AssetManegar.search,

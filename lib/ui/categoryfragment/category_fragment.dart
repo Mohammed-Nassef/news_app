@@ -6,12 +6,13 @@ import 'package:news_app/utils/asset_manegar.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+ 
 // ignore: must_be_immutable
 class CategoryFragment extends StatelessWidget {
   CategoryFragment({super.key, required this.getCategoryByIndex});
   static String routeName = 'CategoryFragment';
   final Function getCategoryByIndex;
-  List<Category> categoryList = [];
+   List<Category> categoryList = [];
   @override
   Widget build(BuildContext context) {
     if (categoryList.isEmpty) {
@@ -43,10 +44,10 @@ class CategoryFragment extends StatelessWidget {
                     child: Image.asset(categoryList[index].imagePath),
                   ),
                   Container(
-                    margin: EdgeInsets.all(25),
+                    margin:const EdgeInsets.all(25),
                     child: ToggleSwitch(
                       minHeight: 58,
-                      customWidths: [
+                      customWidths:const [
                         60,
                         85,
                       ],

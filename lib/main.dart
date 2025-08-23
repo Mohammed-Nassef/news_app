@@ -22,7 +22,7 @@ void main() {
           create: (context) => PageProvider(),
         )
       ],
-      child: NewsApp(),
+      child:const NewsApp(),
     ),
   );
 }
@@ -39,8 +39,8 @@ class NewsApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: HomeScreen.routeName,
       routes: {
-        HomeScreen.routeName: (context) => HomeScreen(),
-        SearchScreen.routeName: (context) => SearchScreen(),
+        HomeScreen.routeName: (context) =>const HomeScreen(),
+        SearchScreen.routeName: (context) =>const SearchScreen(),
       },
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,

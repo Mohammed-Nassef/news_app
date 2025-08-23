@@ -46,8 +46,8 @@ class DrawerHome extends StatelessWidget {
                     iconsName: AssetManegar.home,
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 24),
+             const   Padding(
+                  padding:  EdgeInsets.symmetric(vertical: 24),
                   child: Divider(
                     thickness: 1,
                     color: AppColor.white,
@@ -58,8 +58,8 @@ class DrawerHome extends StatelessWidget {
                   iconsName: AssetManegar.theme,
                 ),
                 Container(
-                  padding: EdgeInsets.all(16),
-                  margin: EdgeInsets.only(top: 8),
+                  padding:const EdgeInsets.all(16),
+                  margin:const EdgeInsets.only(top: 8),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(16),
                     border: Border.all(width: 1, color: AppColor.white),
@@ -105,8 +105,8 @@ class DrawerHome extends StatelessWidget {
                     ],
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 24),
+              const  Padding(
+                  padding:  EdgeInsets.symmetric(vertical: 24),
                   child: Divider(
                     thickness: 1,
                     color: AppColor.white,
@@ -117,8 +117,8 @@ class DrawerHome extends StatelessWidget {
                   iconsName: AssetManegar.language,
                 ),
                 Container(
-                  padding: EdgeInsets.all(16),
-                  margin: EdgeInsets.only(top: 8),
+                  padding:const EdgeInsets.all(16),
+                  margin:const EdgeInsets.only(top: 8),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(16),
                     border: Border.all(width: 1, color: AppColor.white),
@@ -144,7 +144,7 @@ class DrawerHome extends StatelessWidget {
                               PopupMenuItem(
                                 onTap: () {
                                   languageProvider.changeLanguage('en');
-                                  // setState(() {});
+                           
                                 },
                                 child: Text(
                                   AppLocalizations.of(context)!.english,
@@ -154,7 +154,7 @@ class DrawerHome extends StatelessWidget {
                               PopupMenuItem(
                                 onTap: () {
                                   languageProvider.changeLanguage('ar');
-                                  // setState(() {});
+                             
                                 },
                                 child: Text(
                                   AppLocalizations.of(context)!.arabic,

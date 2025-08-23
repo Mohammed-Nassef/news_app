@@ -8,19 +8,17 @@ import 'package:news_app/utils/app_style.dart';
 import 'package:news_app/utils/asset_manegar.dart';
 
 class SearchScreen extends StatefulWidget {
-  static String routeName = 'routeName';
+ 
 
-// final  TextEditingController _controller = TextEditingController();
 
-  SearchScreen({super.key});
-
+  const SearchScreen({super.key});
+ static String routeName = 'routeName';
   @override
   State<SearchScreen> createState() => _SearchScreenState();
 }
 
 class _SearchScreenState extends State<SearchScreen> {
   final List<Article> pagunationList = [];
-
   String? query;
 
   @override
@@ -37,7 +35,7 @@ class _SearchScreenState extends State<SearchScreen> {
                   setState(() {});
                 },
                 style: AppStyle.medium20white,
-                // controller: _controller,
+           
                 cursorColor: AppColor.white,
                 decoration: InputDecoration(
                   hintText: "Search",
@@ -46,7 +44,7 @@ class _SearchScreenState extends State<SearchScreen> {
                     onPressed: () {
                       Navigator.pop(context);
                     },
-                    icon: Icon(
+                    icon:const Icon(
                       Icons.clear_rounded,
                       size: 30,
                       color: AppColor.white,
@@ -54,7 +52,7 @@ class _SearchScreenState extends State<SearchScreen> {
                   ),
                   suffixIcon: IconButton(
                     onPressed: () {
-                      // Navigator.pop(context);
+                    
                       ApiManager.search(query!);
                       setState(() {});
                     },
@@ -64,24 +62,24 @@ class _SearchScreenState extends State<SearchScreen> {
                       width: 24,
                       fit: BoxFit.scaleDown,
                       colorFilter:
-                          ColorFilter.mode(AppColor.white, BlendMode.srcIn),
+                         const ColorFilter.mode(AppColor.white, BlendMode.srcIn),
                     ),
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(16),
-                    borderSide: BorderSide(width: 2, color: AppColor.white),
+                    borderSide:const BorderSide(width: 2, color: AppColor.white),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(16),
-                    borderSide: BorderSide(width: 2, color: AppColor.white),
+                    borderSide:const BorderSide(width: 2, color: AppColor.white),
                   ),
                   errorBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(16),
-                    borderSide: BorderSide(width: 2, color: AppColor.white),
+                    borderSide:const BorderSide(width: 2, color: AppColor.white),
                   ),
                   focusedErrorBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(16),
-                    borderSide: BorderSide(width: 2, color: AppColor.white),
+                    borderSide:const BorderSide(width: 2, color: AppColor.white),
                   ),
                 ),
               ),
@@ -97,7 +95,7 @@ class _SearchScreenState extends State<SearchScreen> {
                       builder: (context, snapShot) {
                         if (snapShot.connectionState ==
                             ConnectionState.waiting) {
-                          Center(
+                        const  Center(
                             child: CircularProgressIndicator(
                               color: AppColor.gray,
                             ),

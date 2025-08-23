@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:news_app/api/api_manager.dart';
 import 'package:news_app/model/news_response/news_response.dart';
 import 'package:news_app/model/source_responce/source_responce.dart';
-import 'package:news_app/provider/page_provider.dart';
 import 'package:news_app/ui/news/news_list.dart';
 import 'package:news_app/utils/app_color.dart';
-import 'package:provider/provider.dart';
+
 
 class News extends StatefulWidget {
   const News({super.key, required this.source});
@@ -15,8 +14,6 @@ class News extends StatefulWidget {
   State<News> createState() => _NewsState();
 }
 
-// List<Article> pagunationList = [];
-
 class _NewsState extends State<News> {
   @override
   Widget build(BuildContext context) {
@@ -24,7 +21,7 @@ class _NewsState extends State<News> {
         future: ApiManager.getNewsBySources(widget.source.id ?? ''),
         builder: (context, snapShot) {
           if (snapShot.connectionState == ConnectionState.waiting) {
-            return Center(
+            return const Center(
               child: CircularProgressIndicator(
                 color: AppColor.gray,
               ),
@@ -47,7 +44,7 @@ class _NewsState extends State<News> {
                       foregroundColor: Theme.of(context).primaryColor,
                       backgroundColor: Theme.of(context).indicatorColor,
                     ),
-                    child: Text('try again'),
+                    child:const Text('try again'),
                   ),
                 ],
               ),
@@ -70,14 +67,13 @@ class _NewsState extends State<News> {
                       foregroundColor: Theme.of(context).primaryColor,
                       backgroundColor: Theme.of(context).indicatorColor,
                     ),
-                    child: Text('try again'),
+                    child:const Text('try again'),
                   ),
                 ],
               ),
             );
           }
-
-          // List<Article> pagunationList = []; pagunationList.addAll(newslist);
+ 
           List<Article> newslist = snapShot.data!.articles ?? [];
 
           return NewsList(
