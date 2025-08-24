@@ -22,7 +22,7 @@ class NewsIteme extends StatelessWidget {
         timeago.format(DateTime.parse(article.publishedAt!), locale: lang);
 
     double heightScreen = MediaQuery.of(context).size.height;
-   
+
     return InkWell(
       borderRadius: BorderRadius.circular(16),
       onTap: () {
@@ -70,10 +70,8 @@ class NewsIteme extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(vertical: 10),
                 child: Text(
                   article.title ?? "no title",
-                  style: Theme.of(context).textTheme.labelLarge?.copyWith(
-             
-                      ),
-             
+                  style: Theme.of(context).textTheme.labelLarge,
+                  maxLines: 2,
                 ),
               ),
             ),

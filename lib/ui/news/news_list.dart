@@ -30,7 +30,7 @@ class NewsList extends StatelessWidget {
           article: newslist[index],
         );
       },
-      itemCount: newslist.length + 1,
+      itemCount: newslist.length,
     );
   }
 
@@ -62,7 +62,6 @@ class NewsList extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(8),
               child: CachedNetworkImage(
-         
                 fit: BoxFit.fill,
                 imageUrl: article.urlToImage ?? '',
                 placeholder: (context, url) => const Center(
@@ -89,7 +88,7 @@ class NewsList extends StatelessWidget {
             ),
             FilledButton.icon(
               style: FilledButton.styleFrom(
-                  padding:const EdgeInsets.symmetric(vertical: 16),
+                  padding: const EdgeInsets.symmetric(vertical: 16),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8),
                   ),

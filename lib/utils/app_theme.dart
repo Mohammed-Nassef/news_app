@@ -4,6 +4,24 @@ import 'package:news_app/utils/app_style.dart';
 
 class AppTheme {
   static ThemeData lightTheme = ThemeData(
+    inputDecorationTheme: InputDecorationTheme(
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(16),
+        borderSide: const BorderSide(width: 2, color: AppColor.black),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(16),
+        borderSide: const BorderSide(width: 2, color: AppColor.black),
+      ),
+      errorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(16),
+        borderSide: const BorderSide(width: 2, color: AppColor.black),
+      ),
+      focusedErrorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(16),
+        borderSide: const BorderSide(width: 2, color: AppColor.black),
+      ),
+    ),
     primaryColor: AppColor.white,
     indicatorColor: AppColor.black,
     scaffoldBackgroundColor: AppColor.white,
@@ -21,6 +39,24 @@ class AppTheme {
         titleLarge: AppStyle.medium12gray),
   );
   static ThemeData darkTheme = ThemeData(
+    inputDecorationTheme: InputDecorationTheme(
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(16),
+        borderSide: const BorderSide(width: 2, color: AppColor.white),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(16),
+        borderSide: const BorderSide(width: 2, color: AppColor.white),
+      ),
+      errorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(16),
+        borderSide: const BorderSide(width: 2, color: AppColor.white),
+      ),
+      focusedErrorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(16),
+        borderSide: const BorderSide(width: 2, color: AppColor.white),
+      ),
+    ),
     primaryColor: AppColor.black,
     indicatorColor: AppColor.white,
     scaffoldBackgroundColor: AppColor.black,
